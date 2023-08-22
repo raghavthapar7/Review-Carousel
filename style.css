@@ -49,9 +49,32 @@ body {
   flex-direction: column;
   gap: 24px;
   border-radius: 10px;
+  z-index: -1;
 }
 
 .img-container {
+  margin: auto;
+  position: relative;
+  z-index: 0;
+}
+
+.backdrop {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #74c0fc;
+
+  position: absolute;
+  left: 7%;
+  bottom: 5%;
+  z-index: -1;
+}
+
+#author-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
 }
 
 #author-name {
