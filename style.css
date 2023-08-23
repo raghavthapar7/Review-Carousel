@@ -98,19 +98,52 @@ body {
 }
 
 .footer {
+  margin: auto;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
 }
 
 .navigation-btn {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.btn-prev,
+.btn-next {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2.5;
+  cursor: pointer;
+  stroke: #339af0;
 }
 
 .btn {
+  background: none;
+  border: none;
+  display: inherit;
 }
 
-.btn-prev {
-}
-
+.btn-prev,
 .btn-next {
+  stroke: #339af0;
 }
 
 .random-btn {
+  background-color: #fff;
+  padding: 4px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #339af0;
+  color: #339af0;
+
+  transition: all 300ms ease;
+}
+
+.random-btn:hover {
+  background-color: #339af0;
+  color: #fff;
 }
