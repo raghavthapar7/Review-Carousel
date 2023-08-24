@@ -114,8 +114,7 @@ body {
   margin-bottom: 12px;
 }
 
-.btn-prev,
-.btn-next {
+.btn-icon {
   width: 24px;
   height: 24px;
   stroke-width: 2.5;
@@ -127,11 +126,6 @@ body {
   background: none;
   border: none;
   display: inherit;
-}
-
-.btn-prev,
-.btn-next {
-  stroke: #339af0;
 }
 
 .random-btn {
