@@ -128,7 +128,7 @@ body {
   display: inherit;
 }
 
-.random-btn {
+.btn-random {
   background-color: #fff;
   padding: 4px 12px;
   border-radius: 10px;
@@ -139,7 +139,7 @@ body {
   transition: all 300ms ease;
 }
 
-.random-btn:hover {
+.btn-random:hover {
   background-color: #339af0;
   color: #fff;
 }
