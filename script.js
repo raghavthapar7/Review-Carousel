@@ -6,7 +6,8 @@ const reviews = [
     id: 1,
     name: "Susan Smith",
     job: "Web Developer",
-    image: "https://xsgames.co/randomusers/avatar.php?g=female",
+    image:
+      "https://images.pexels.com/photos/3328072/pexels-photo-3328072.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     review:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quo doloremque doloribus debitis. Eius iusto labore at amet doloribus laboriosam. Nisi inventore a minus magni nihil aut id unde eum.",
   },
@@ -14,23 +15,26 @@ const reviews = [
     id: 2,
     name: "Anna Johnson",
     job: "Intern",
-    image: "https://xsgames.co/randomusers/avatar.php?g=female",
+    image:
+      "https://images.pexels.com/photos/13104099/pexels-photo-13104099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     review:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo quas magni accusantium cum tempore quidem! Saepe laborum expedita molestiae doloribus. Assumenda repellendus voluptas laborum blanditiis nihil qui expedita molestiae nemo!",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo quas magni accusantium cum tempore quidem! Saepe laborum expedita molestiae doloribus. Assumenda repellendus voluptas laborum",
   },
   {
     id: 3,
     name: "Peter Jones",
     job: "UI/UX Designer",
-    image: "https://xsgames.co/randomusers/avatar.php?g=male",
+    image:
+      "https://images.pexels.com/photos/6102841/pexels-photo-6102841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem velit expedita numquam, autem quis placeat ea. Minima ipsum aperiam rerum repudiandae expedita commodi odit magnam sapiente itaque adipisci, maiores ad.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem velit expedita numquam, autem quis placeat ea. Minima ipsum aperiam rerum repudiandae expedita commodi odit magnam sapiente itaque.",
   },
   {
     id: 4,
     name: "Corey Anderson",
     job: "Senior Developer",
-    image: "https://xsgames.co/randomusers/avatar.php?g=male",
+    image:
+      "https://images.pexels.com/photos/3394657/pexels-photo-3394657.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     review:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, at nulla? Dolorem tempora, atque veniam, beatae modi deleniti optio ipsum consectetur ut totam ex quis, cum assumenda eveniet iusto itaque.",
   },
@@ -71,7 +75,8 @@ let showData = function (currentItem) {
   image.src = person.image;
 };
 
-// Function to validate the currentItem
+// Function to validate the currentItem so that the data does not
+// go out of range
 let validateCurrentItem = function () {
   if (currentItem > 3) {
     currentItem = 0;
@@ -86,12 +91,14 @@ window.addEventListener("DOMContentLoaded", function () {
   showData(currentItem);
 });
 
+// Changes the review to the next person
 btnNext.addEventListener("click", function () {
   currentItem++;
   validateCurrentItem();
   showData(currentItem);
 });
 
+// Changes the review to the previous person
 btnPrev.addEventListener("click", function () {
   currentItem--;
   validateCurrentItem();
