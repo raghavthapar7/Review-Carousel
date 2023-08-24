@@ -71,6 +71,15 @@ let showData = function (currentItem) {
   image.src = person.image;
 };
 
+// Function to validate the currentItem
+let validateCurrentItem = function () {
+  if (currentItem > 3) {
+    currentItem = 0;
+  } else if (currentItem < 0) {
+    currentItem = 3;
+  }
+};
+
 // Loading the data when the page loads
 // This event is triggered when the page is all loaded up
 window.addEventListener("DOMContentLoaded", function () {
@@ -79,16 +88,12 @@ window.addEventListener("DOMContentLoaded", function () {
 
 btnNext.addEventListener("click", function () {
   currentItem++;
-  if (currentItem > 3) {
-    currentItem = 0;
-  }
+  validateCurrentItem();
   showData(currentItem);
 });
 
 btnPrev.addEventListener("click", function () {
   currentItem--;
-  if (currentItem < 0) {
-    currentItem = 3;
-  }
+  validateCurrentItem();
   showData(currentItem);
 });
