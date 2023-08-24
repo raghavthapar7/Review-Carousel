@@ -62,12 +62,33 @@ let job = document.getElementById("author-job");
 let review = document.getElementById("author-review");
 let image = document.getElementById("author-img");
 
-// Loading the data when the page loads
-// This event is triggered when the page is all loaded up
-window.addEventListener("DOMContentLoaded", function () {
+// Making a function to avoid redundant code
+let showData = function (currentItem) {
   let person = reviews[currentItem];
   name.textContent = person.name;
   job.textContent = person.job;
   review.textContent = person.review;
   image.src = person.image;
+};
+
+// Loading the data when the page loads
+// This event is triggered when the page is all loaded up
+window.addEventListener("DOMContentLoaded", function () {
+  showData(currentItem);
+});
+
+btnNext.addEventListener("click", function () {
+  currentItem++;
+  if (currentItem > 3) {
+    currentItem = 0;
+  }
+  showData(currentItem);
+});
+
+btnPrev.addEventListener("click", function () {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = 3;
+  }
+  showData(currentItem);
 });
