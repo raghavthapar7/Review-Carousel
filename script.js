@@ -97,3 +97,10 @@ btnPrev.addEventListener("click", function () {
   validateCurrentItem();
   showData(currentItem);
 });
+
+// Getting a random person to show the review of
+btnRandom.addEventListener("click", function () {
+  let randomNumber = Math.round(Math.random() * 3);
+  currentItem = randomNumber;
+  showData(currentItem);
+});
