@@ -36,14 +36,38 @@ const reviews = [
   },
 ];
 
-let changeButtons = document.querySelectorAll(".btn");
+// let changeButtons = document.querySelectorAll(".btn");
 
-changeButtons.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    if (btn.classList.contains("btn-next")) {
-      console.log("btn-next");
-    } else if (btn.classList.contains("btn-prev")) {
-      console.log("btn-prev");
-    }
-  });
+// changeButtons.forEach((btn) => {
+//   btn.addEventListener("click", function () {
+//     if (btn.classList.contains("btn-next")) {
+//       console.log("btn-next");
+//     } else if (btn.classList.contains("btn-prev")) {
+//       console.log("btn-prev");
+//     }
+//   });
+// });
+
+// Counter for iterating through the Data array
+let currentItem = 0;
+
+// Buttons for event listeners
+let btnNext = document.querySelector(".btn-next");
+let btnPrev = document.querySelector(".btn-prev");
+let btnRandom = document.querySelector(".btn-random");
+
+// Data points to show
+let name = document.getElementById("author-name");
+let job = document.getElementById("author-job");
+let review = document.getElementById("author-review");
+let image = document.getElementById("author-img");
+
+// Loading the data when the page loads
+// This event is triggered when the page is all loaded up
+window.addEventListener("DOMContentLoaded", function () {
+  let person = reviews[currentItem];
+  name.textContent = person.name;
+  job.textContent = person.job;
+  review.textContent = person.review;
+  image.src = person.image;
 });
